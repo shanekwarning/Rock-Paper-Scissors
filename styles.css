@@ -1,0 +1,25 @@
+body {
+  display: flex;
+  justify-content: space-between;
+  border-color: black;
+  border-style: solid;
+  border: 4px
+
+}
+
+.gamebox {
+  display: flex;
+  border-color: purple;
+  border-style: solid;
+  padding: 29%;
+  margin: 0
+}
+
+.player {
+  display: flex;
+  border-color: red;
+  border-style: solid;
+  padding: 5%;
+  margin: 0
+
+}
