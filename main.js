@@ -1,6 +1,7 @@
 var weaponsArray = ['Rock', 'Paper', 'Scissors']
 
 var newPlayer = new Player
+var computerPlayer = new Player
 
 var randomWeapon = weaponsArray[getRandomIndex(weaponsArray)]
 
