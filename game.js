@@ -25,5 +25,3 @@ class Game {
 }
 
 var startGame = new Game(newPlayer, computerPlayer)
-
-startGame.checkWinner(newPlayer.name, computerPlayer.name)
