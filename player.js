@@ -6,7 +6,6 @@ class Player {
     this.wins = wins || 0
   }
   takeTurn(weapon) {
-    // var randomWeapon = ''
     randomWeapon =weaponsArray[getRandomIndex(weaponsArray)]
     return this.currentWeapon = weapon || randomWeapon
   }
