@@ -1,12 +1,15 @@
 class Player {
-  constructor(name, token, currentWeapon, wins) {
+  constructor(name, currentWeapon) {
     this.name = name,
-    this.token = token,
-    this.currentWeapon = currentWeapon
-    this.wins = wins || 0
+    this.currentWeapon = currentWeapon,
+    this.wins = 0
   }
   takeTurn(weapon) {
-    randomWeapon =weaponsArray[getRandomIndex(weaponsArray)]
+    randomWeapon = weaponsArray[getRandomIndex(weaponsArray)]
     return this.currentWeapon = weapon || randomWeapon
   }
 }
+
+
+var newPlayer = new Player
+var computerPlayer = new Player

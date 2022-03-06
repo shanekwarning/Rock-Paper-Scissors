@@ -1,9 +1,13 @@
+/* * {
+  border: 0px;
+} */
 body {
   display: flex;
   justify-content: space-between;
-  border-color: black;
+  margin: 0
+  /* border-color: black;
   border-style: solid;
-  border: 4px
+  border: 4px */
 
 }
 
@@ -55,22 +59,17 @@ color: #ccff15
 }
 
 .weapon-icons {
-  border-color: pink;
-  border-style: solid;
-  border: 4px;
-  height: 5%;
-  width: 5%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  height: 80px;
-  width: 80px
+  border-color: pink;
+  border-style: solid;
+  /* margin-bottom: 25% */
 }
 .weapon-box {
   border-color: green;
   border-style: solid;
-  border: 4px;
 }
 .weapon {
   height: 40px;
@@ -99,5 +98,9 @@ color: #ccff15
 .player {
   display: flex;
   flex-direction: column;
-align-items: center
+  align-items: center
+}
+
+.hidden {
+  display: none
 }
