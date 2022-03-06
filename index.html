@@ -1,69 +1,62 @@
 <html lang='en' dir='ltr'>
-  <head>
-    <meta charset="utf-8">
-    <link rel='stylesheet' href='styles.css'>
-    <title>RockPaperScissors</title>
-  <body>
-    <aside class='player human-side'>
-      <section class='computer-information'>
-         <img class='player-icon' src='./images/Skeleton-icon.png'>
-        <p>Human</p>
-        <p>Wins:</p>
-      </section>
-        <button class='change-game'>Change Game</button>
-    </aside>
-    <main>
-      <header>
-        <section class='title-box'>
+
+<head>
+  <meta charset="utf-8">
+  <link rel='stylesheet' href='styles.css'>
+  <title>RockPaperScissors</title>
+
+<body>
+  <aside class='player human-side'>
+    <section class='computer-information'>
+      <img class='player-icon' src='./images/Skeleton-icon.png'>
+      <p>Human</p>
+      <p>Wins:</p>
+    </section>
+    <button class='change-game'>Change Game</button>
+  </aside>
+  <main>
+    <header>
+      <section class='title-box'>
         <h1>Rock, Paper, Scissors</h1>
       </section>
       <section class='sub-title-box'>
         <h2>Choose Your Weapon</h2>
       </section>
-      </header>
-      <div class='gamebox'>
+    </header>
+    <div class='gamebox'>
       <section class='difficulty-box easy'>
-          <p class='rules title'>Click Here to Play</p>
-          <p class='rules'>Rock > Scissors</p>
-          <p class='rules'>Scissors > Paper</p>
-          <p class='rules'>Paper > Rock</p>
+        <p class='rules title'>Click Here to Play</p>
+        <p class='rules'>Rock > Scissors</p>
+        <p class='rules'>Scissors > Paper</p>
+        <p class='rules'>Paper > Rock</p>
       </section>
       <section class='difficulty-box hard'>
-          <p class='rules title'>Click Here to Play</p>
-          <p class='rules'>Rock > Scissors & Lizard</p>
-          <p class='rules'>Scissors > Paper & Lizard</p>
-          <p class='rules'>Paper > Rock & Alien</p>
-          <p class='rules'>Lizard > Paper & Alien</p>
-          <p class='rules'>Alien > Scissors & Rock</p>
-        </section>
-        <div class='weapon-icons'>
-            <div class='weapon-box'>
-              <img class='weapon rock hidden' src='./images/happy-rocks.png'>
-            </div>
-            <div class='weapon-box'>
-              <img class='weapon paper hidden'src='./images/happy-paper.png'>
-            </div>
-            <div class='weapon-box'>
-              <img class='weapon scissors hidden'src='./images/happy-scissors.png'>
-            </div>
-            <div class='weapon-box'>
-              <img class='weapon lizard hidden'src='./images/flat-lizard.png'>
-            </div>
-            <div class='weapon-box'>
-              <img class='weapon alien hidden'src='./images/flat-alien.png'>
-            </div>
-        </div>
-      </div>
-    </main>
-    <aside class='player computer-side'>
-      <section class='computer-information'>
-        <img class='computer-icon' src='./images/clipart968421.png'>
-        <p class='name'>Computer</p>
-        <p class='wins'>Wins:</p>
+        <p class='rules title'>Click Here to Play</p>
+        <p class='rules'>Rock > Scissors & Lizard</p>
+        <p class='rules'>Scissors > Paper & Lizard</p>
+        <p class='rules'>Paper > Rock & Alien</p>
+        <p class='rules'>Lizard > Paper & Alien</p>
+        <p class='rules'>Alien > Scissors & Rock</p>
       </section>
-    </aside>
-  </body>
-  <script type="text/javascript" src="player.js"></script>
-  <script type="text/javascript" src="main.js"></script>
-  <script type="text/javascript" src="game.js"></script>
+      <div class='weapon-icons'>
+        <img class='weapon hidden' id='rock' src='./images/happy-rocks.png'>
+        <img class='weapon hidden' id='paper' src='./images/happy-paper.png'>
+        <img class='weapon hidden' id='scissors' src='./images/happy-scissors.png'>
+        <img class='weapon hidden' id='lizard' src='./images/flat-lizard.png'>
+        <img class='weapon hidden' id='alien' src='./images/flat-alien.png'>
+      </div>
+    </div>
+  </main>
+  <aside class='player computer-side'>
+    <section class='computer-information'>
+      <img class='computer-icon' src='./images/clipart968421.png'>
+      <p class='name'>Computer</p>
+      <p class='wins'>Wins:</p>
+    </section>
+  </aside>
+</body>
+<script type="text/javascript" src="player.js"></script>
+<script type="text/javascript" src="game.js"></script>
+<script type="text/javascript" src="main.js"></script>
+
 </html>
