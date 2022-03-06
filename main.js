@@ -15,13 +15,16 @@ clickToPlayEasy.addEventListener('click', function() {
   }
   toggle(clickToPlay[0])
   toggle(clickToPlay[1])
+  toggle(chooseWeapon)
 })
 
 changeGameBtn.addEventListener('click', function() {
   for (var i = 0; i < weaponButtons.length; i++) {
     hide(weaponButtons[i])
+    toggle(chooseWeapon)
     show(clickToPlay[i])
   }
+
 })
 
 chooseWeapon.addEventListener('click', function(){
