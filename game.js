@@ -9,20 +9,27 @@ class Game {
   checkWinner(player, computer) {
     if (player === 'rock' && computer === 'paper') {
       this.player2.wins += 1;
-      return 'Computer Wins.'
+      banner.innerText = 'Computer Wins.'
     } else if (player === 'paper' && computer === 'scissors') {
        this.player2.wins += 1;
-       return 'Computer Wins.'
+       banner.innerText = 'Computer Wins.'
     } else if (player === 'scissors' && computer === 'rock') {
       this.player2.wins += 1;
-      return 'Computer Wins.'
+      banner.innerText = 'Computer Wins.'
     } else if (player === computer){
-        return 'It\s a tie.'
+        banner.innerText = 'It\s a tie.'
       } else {
         this.player1.wins += 1;
-        return 'You Win!'
+        banner.innerText = 'You Win!'
       }
     }
+    displayScore() {
+      if (banner.innerText === 'Computer Wins.') {
+        computerScore.innerText = `Win\s ${this.player2.wins}`
+      } else if (banner.innerText === 'You Win!') {
+        playerScore.innerText = `Win\s ${this.player1.wins}`
+    }
+  }
 }
 
 var startGame = new Game(newPlayer, computerPlayer)
