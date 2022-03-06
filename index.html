@@ -1,4 +1,4 @@
-<!<!DOCTYPE html>
+<!-- <!DOCTYPE html> -->
 <html lang='en' dir='ltr'>
   <head>
     <meta charset="utf-8">
@@ -6,57 +6,62 @@
     <title>RockPaperScissors</title>
   <body>
     <aside class='player human-side'>
-      <section class='human-information'>
-        <img class='player-icon'>
-        <p class='name'>Human</p>
-      </section>
-      <button class='change-game'>Change Game</button>
-    </aside>
-
-    <main class='gamebox'>
-      <section class='title-style'>
-        <h1>Rock, Paper, Scissors</h1>
-        <div class='dialogue-style'>
-          <p class='game-dialogue'>Choose Your Weapon</p>
-        </div>
-      </section>
-      <div class='weapon-icons'>
-        <div class='weapon-box'>
-          <img class='weapon rock hidden' src='./images/happy-rocks.png'>
-        </div>
-        <div class='weapon-box'>
-          <img class='weapon paper hidden'src='./images/happy-paper.png'>
-        </div>
-        <div class='weapon-box'>
-          <img class='weapon scissors hidden'src='./images/happy-scissors.png'>
-        </div>
-        <div class='weapon-box'>
-          <img class='weapon lizard hidden'src='./images/flat-lizard.png'>
-        </div>
-        <div class='weapon-box'>
-          <img class='weapon alien hidden'src='./images/flat-alien.png'>
-        </div>
+      <div>
+         <img class='player-icon' src='./images/Skeleton-icon.png'>
       </div>
-      <nav class='difficuly-choice'
-        <section class='difficuly-box' id='easy'>
-          <p class='rules'></p>
+      <section class='human-information'>
+        <p>Human</p>
+        <p>Wins:</p>
+      </section>
+    </aside>
+    <main class='gamebox'>
+      <header>
+        <h1>Rock, Paper, Scissors</h1>
+        <h2>Choose Your Weapon</h2>
+      </header>
+        <section class='difficulty-easy'>
+          <p>Click Here to Play</p>
+          <p>Rock > Scissors</p>
+          <p>Scissors > Paper</p>
+          <p>Paper > Rock</p>
         </section>
-        <section class='difficuly-choice' id='hard'>
-          <p class='rules'></p>
-        </section>
-      </nav>
+        <section class='difficulty-hard'>
+          <p>Click Here to Play</p>
+          <p>Rock > Scissors & Lizard</p>
+          <p>Scissors > Paper & Lizard</p>
+          <p>Paper > Rock & Alien</p>
+          <p>Lizard > Paper & Alien</p>
+          <p>Alien > Scissors & Rock</p>
+          </section>
     </main>
-    
     <aside class='player computer-side'>
       <section class='computer-information'>
-        <img class='computer-icon'>
+        <img class='computer-icon' src='./images/clipart968421.png'>
         <p class='name'>Computer</p>
+        <p class='wins'>Wins:</p>
       </section>
     </aside>
   </body>
-
-
   <script type="text/javascript" src="player.js"></script>
   <script type="text/javascript" src="main.js"></script>
   <script type="text/javascript" src="game.js"></script>
 </html>
+
+<!-- <button class='change-game'>Change Game</button>
+<div class='weapon-icons'>
+  <div class='weapon-box'>
+    <img class='weapon rock hidden' src='./images/happy-rocks.png'>
+  </div>
+  <div class='weapon-box'>
+    <img class='weapon paper hidden'src='./images/happy-paper.png'>
+  </div>
+  <div class='weapon-box'>
+    <img class='weapon scissors hidden'src='./images/happy-scissors.png'>
+  </div>
+  <div class='weapon-box'>
+    <img class='weapon lizard hidden'src='./images/flat-lizard.png'>
+  </div>
+  <div class='weapon-box'>
+    <img class='weapon alien hidden'src='./images/flat-alien.png'>
+  </div>
+</div> -->
