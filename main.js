@@ -12,6 +12,7 @@ clickToPlayEasy.addEventListener('click', function() {
   for (var i = 0; i < clickToPlay.length; i++){
 toggle(clickToPlay[i])
 toggle(weaponButtons[i])}
+computerPlayer.takeTurn()
 })
 
 changeGameBtn.addEventListener('click', function() {
