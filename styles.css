@@ -8,18 +8,77 @@ body {
 }
 
 .gamebox {
-  display: flex;
+  background-color: slateBlue;
+  width: 70%;
   border-color: purple;
   border-style: solid;
-  padding: 29%;
-  margin: 0
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.player {
-  display: flex;
-  border-color: red;
+header {
+  border: 4px;
+  border-color: orange;
   border-style: solid;
-  padding: 5%;
-  margin: 0
+  display: flex;
+  justify-content: row;
+  padding: 0px
+}
 
+h1 {
+}
+
+.difficulty-easy {
+  border: 4px;
+  border-color: red;
+  border-style: solid
+}
+
+.difficulty-hard {
+  border: 4px;
+  border-color: red;
+  border-style: solid
+}
+.weapon-icons {
+  border-color: pink;
+  border-style: solid;
+  border: 4px;
+  height: 5%;
+  width: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  width: 80px
+}
+.weapon-box {
+  border-color: green;
+  border-style: solid;
+  border: 4px;
+}
+.weapon {
+  height: 40px;
+  width: 40px
+}
+
+.human-side {
+  width: 15%;
+  background-color:green
+}
+
+.computer-side {
+  width: 15%;
+  background-color:green
+}
+
+.player-icon {
+  height: 5%;
+  width: 80%
+}
+
+.computer-icon {
+  height: 5%;
+  width: 80%
 }
