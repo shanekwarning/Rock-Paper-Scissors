@@ -15,31 +15,45 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center
 }
 
 header {
   border: 4px;
   border-color: orange;
   border-style: solid;
-  display: flex;
-  justify-content: row;
-  padding: 0px
+  padding: 0px;
 }
 
 h1 {
+color: #ccff15
 }
 
-.difficulty-easy {
+
+.difficulty-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-content: center;
   border: 4px;
   border-color: red;
-  border-style: solid
+  border-style: solid;
+  background: darkred;
+  border-radius: 20px;
+  border-radius: 20px;
+  width: 15%;
+  height: 20%
+}
+.rules {
+  margin: 3;
+  color: lightgreen
 }
 
-.difficulty-hard {
-  border: 4px;
-  border-color: red;
-  border-style: solid
+.title {
+  font-size: larger;
+  color: gold;
 }
+
 .weapon-icons {
   border-color: pink;
   border-style: solid;
@@ -74,11 +88,16 @@ h1 {
 }
 
 .player-icon {
-  height: 5%;
-  width: 80%
+  height: 50px;
+  width: 50px
 }
 
 .computer-icon {
-  height: 5%;
-  width: 80%
+  height: 50px;
+  width: 50px
+}
+.player {
+  display: flex;
+  flex-direction: column;
+align-items: center
 }
