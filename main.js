@@ -4,7 +4,10 @@ var weaponButtons = document.querySelectorAll('.weapon')
 var classicWeapons = document.querySelectorAll('.classic')
 var changeGameBtn = document.querySelector('.change-game')
 var chooseWeapon = document.querySelector('.weapon-icons')
-var weaponsArray = ['Rock', 'Paper', 'Scissors']
+var banner = document.querySelector('h2')
+var playerScore = document.querySelector('.player-score')
+var computerScore = document.querySelector('.computer-score')
+var weaponsArray = ['rock', 'paper', 'scissors']
 
 var randomWeapon = weaponsArray[getRandomIndex(weaponsArray)]
 
@@ -31,6 +34,7 @@ chooseWeapon.addEventListener('click', function(){
   playerWeaponChoice(event)
   computerPlayer.takeTurn()
   startGame.checkWinner(newPlayer.currentWeapon, computerPlayer.currentWeapon)
+  startGame.displayScore()
 })
 
 function classic() {
@@ -65,3 +69,7 @@ function playerWeaponChoice(event) {
     }
   }
 }
+
+// function displayWinner() {
+// banner.innerText =
+// }
