@@ -10,3 +10,7 @@ class Player {
     return this.currentWeapon = weapon || randomWeapon
   }
 }
+
+
+var newPlayer = new Player
+var computerPlayer = new Player
