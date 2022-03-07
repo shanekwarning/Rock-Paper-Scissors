@@ -6,6 +6,11 @@ class Game {
     this.player2 = player2,
     this.gameType = gameType
   }
+  // gameMode() {
+  //   if (this.gameType = 'classic'){
+  //
+  //   } else if (this.gameType = 'advanced')
+  // }
   checkWinner(player, computer) {
     if (player === 'rock' && computer === 'paper') {
       this.player2.wins += 1;
