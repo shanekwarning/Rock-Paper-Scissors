@@ -35,6 +35,8 @@ chooseWeapon.addEventListener('click', function(){
   computerPlayer.takeTurn()
   startGame.checkWinner(newPlayer.currentWeapon, computerPlayer.currentWeapon)
   startGame.displayScore()
+  compareWeapons()
+  // setTimeout(, 5000)
 })
 
 function classic() {
@@ -70,6 +72,19 @@ function playerWeaponChoice(event) {
   }
 }
 
-// function displayWinner() {
-// banner.innerText =
+function compareWeapons() {
+  for (var i = 0; i < weaponButtons.length; i++){
+  if (classicWeapons[i].id !== startGame.player1.currentWeapon && classicWeapons[i].id !== startGame.player2.currentWeapon) {
+    console.log(classicWeapons[i])
+    toggle(classicWeapons[i])
+  }
+  }
+}
+//
+// function resetWeapon() {
+//   for (var i = 0; i < weaponButtons.length; i++) {
+//     if (weaponButtons[i].classList[i] === 'hidden'){
+//       show(weaponButtons[i])
+//     }
+//   }
 // }
