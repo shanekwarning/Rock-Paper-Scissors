@@ -5,6 +5,13 @@ class Game {
     this.player1 = player1,
     this.player2 = player2,
     this.gameType = gameType
+    this.winConditions = {
+      rock: ['scissors', 'lizard'],
+      paper: ['rock', 'alien'],
+      scissors: ['paper', 'lizard'],
+      lizard: ['paper', 'alien'],
+      alien: ['scissors', 'rock']
+    }
   }
   // gameMode() {
   //   if (this.gameType = 'classic'){
@@ -12,29 +19,22 @@ class Game {
   //   } else if (this.gameType = 'advanced')
   // }
   checkWinner(player, computer) {
-    if (player === 'rock' && computer === 'paper') {
-      this.player2.wins += 1;
-      banner.innerText = 'Computer Wins.'
-    } else if (player === 'paper' && computer === 'scissors') {
-       this.player2.wins += 1;
-       banner.innerText = 'Computer Wins.'
-    } else if (player === 'scissors' && computer === 'rock') {
-      this.player2.wins += 1;
-      banner.innerText = 'Computer Wins.'
-    } else if (player === computer){
+      if (player === computer) {
         banner.innerText = 'It\s a tie.'
-      } else {
+        return
+      } else if (this.winConditions[player].includes(computer)) {
         this.player1.wins += 1;
         banner.innerText = 'You Win!'
+      } else {
+        this.player2.wins += 1;
+        banner.innerText = 'Computer Wins.'
       }
-    }
-    displayScore() {
-      if (banner.innerText === 'Computer Wins.') {
-        computerScore.innerText = `Win\s ${this.player2.wins}`
-      } else if (banner.innerText === 'You Win!') {
-        playerScore.innerText = `Win\s ${this.player1.wins}`
+  }
+  displayScore() {
+    if (banner.innerText === 'Computer Wins.') {
+      computerScore.innerText = `Win\s ${this.player2.wins}`
+    } else if (banner.innerText === 'You Win!') {
+      playerScore.innerText = `Win\s ${this.player1.wins}`
     }
   }
 }
-
-var startGame = new Game(newPlayer, computerPlayer)
