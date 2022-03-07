@@ -10,40 +10,46 @@ var gameBox = document.querySelector('.gamebox')
 var banner = document.querySelector('h2')
 var playerScore = document.querySelector('.player-score')
 var computerScore = document.querySelector('.computer-score')
-var weaponsArray = ['rock', 'paper', 'scissors']
-var weaponsArrayAdvace = ['rock', 'paper', 'scissors', ]
+var weaponsArray = ['rock', 'paper', 'scissors', 'lizard', 'alien']
+
 var randomWeapon = weaponsArray[getRandomIndex(weaponsArray)]
 
+var game;
 
-gameBox.addEventListener('click', function() {
-  assignGameMode(event)
-})
-
-function assignGameMode(event) {
-  mouseClick = event.target.className
-  console.log(mouseClick)
-  // for (var i = 0; i < rules.length; i++) {
-    if (mouseClick === clickToPlayEasy.className) {
-    startGame.gameType = 'classic'
-    console.log(startGame.gameType)
-  } else if (mouseClick === clickToPlayHard.className) {
-    startGame.gameType = 'advanced'
-  }
-  }
-}
-// clickToPlayEasy.addEventListener('click', function() {
-//   showWeapons(classicWeapons)
-//   toggle(clickToPlay[0])
-//   toggle(clickToPlay[1])
-//   toggle(chooseWeapon)
+// gameBox.addEventListener('click', function() {
+//   assignGameMode(event)
 // })
 //
-// clickToPlayHard.addEventListener('click', function() {
-//   showWeapons(weaponButtons)
-//   toggle(clickToPlay[0])
-//   toggle(clickToPlay[1])
-//   toggle(chooseWeapon)
-// })
+// function assignGameMode() {
+//   mouseClick = event.target.className
+//   console.log(mouseClick)
+//   // for (var i = 0; i < rules.length; i++) {
+//     if (mouseClick === clickToPlayEasy.className) {
+//     game.gameType = 'classic'
+//     console.log(game.gameType)
+//   } else if (mouseClick === clickToPlayHard.className) {
+//     game.gameType = 'advanced'
+//   }
+//   }
+// }
+window.addEventListener('load', game)
+
+
+clickToPlayEasy.addEventListener('click', function() {
+  game.gameType = 'classic'
+  showWeapons(classicWeapons)
+  toggle(clickToPlay[0])
+  toggle(clickToPlay[1])
+  toggle(chooseWeapon)
+})
+
+clickToPlayHard.addEventListener('click', function() {
+  game.gameType = 'advanced'
+  showWeapons(weaponButtons)
+  toggle(clickToPlay[0])
+  toggle(clickToPlay[1])
+  toggle(chooseWeapon)
+})
 
 changeGameBtn.addEventListener('click', function() {
   for (var i = 0; i < weaponButtons.length; i++) {
@@ -56,9 +62,9 @@ changeGameBtn.addEventListener('click', function() {
 
 chooseWeapon.addEventListener('click', function() {
   playerWeaponChoice(event)
-  computerPlayer.takeTurn()
-  startGame.checkWinner(newPlayer.currentWeapon, computerPlayer.currentWeapon)
-  startGame.displayScore()
+  game.player2.takeTurn()
+  game.checkWinner(game.player1.currentWeapon, game.player2.currentWeapon)
+  game.displayScore()
   compareWeapons()
   setTimeout(roundTwo, 3000)
 })
@@ -68,7 +74,7 @@ function playerWeaponChoice(event) {
   selection = event.target.id
   for (var i = 0; i < weaponButtons.length; i++) {
     if (weaponButtons[i].className === event.target.className) {
-      newPlayer.currentWeapon = selection
+    game.player1.currentWeapon = selection
     }
   }
 }
@@ -79,8 +85,14 @@ function classic() {
   }
 }
 
-function getRandomIndex(weapon) {
-  return Math.floor(Math.random() * weapon.length)
+function game() {
+  var newPlayer = new Player
+  var computerPlayer = new Player
+  game = new Game(newPlayer, computerPlayer)
+}
+
+function getRandomIndex(num) {
+  return Math.floor(Math.random() * num)
 }
 
 function toggle(element) {
@@ -104,7 +116,7 @@ function showWeapons(weapons) {
 
 function compareWeapons() {
   for (var i = 0; i < weaponButtons.length; i++) {
-    if (weaponButtons[i].id !== startGame.player1.currentWeapon && weaponButtons[i].id !== startGame.player2.currentWeapon) {
+    if (weaponButtons[i].id !== game.player1.currentWeapon && weaponButtons[i].id !== game.player2.currentWeapon) {
       hide(weaponButtons[i])
     }
   }
