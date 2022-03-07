@@ -30,7 +30,7 @@ changeGameBtn.addEventListener('click', function() {
 
 })
 
-chooseWeapon.addEventListener('click', function(){
+chooseWeapon.addEventListener('click', function() {
   playerWeaponChoice(event)
   computerPlayer.takeTurn()
   startGame.checkWinner(newPlayer.currentWeapon, computerPlayer.currentWeapon)
@@ -73,28 +73,18 @@ function playerWeaponChoice(event) {
 }
 
 function compareWeapons() {
-  for (var i = 0; i < weaponButtons.length; i++){
-  if (weaponButtons[i].id !== startGame.player1.currentWeapon && weaponButtons[i].id !== startGame.player2.currentWeapon) {
-    hide(weaponButtons[i])
-  }
+  for (var i = 0; i < weaponButtons.length; i++) {
+    if (weaponButtons[i].id !== startGame.player1.currentWeapon && weaponButtons[i].id !== startGame.player2.currentWeapon) {
+      hide(weaponButtons[i])
+    }
   }
 }
 
 function roundTwo() {
-  for (var i = 0; i < classicWeapons.length; i++){
+  for (var i = 0; i < classicWeapons.length; i++) {
     if (classicWeapons[i].classList.contains('hidden')) {
-    show(classicWeapons[i])
-    banner.innerText = 'Choose Your Weapon!'
+      show(classicWeapons[i])
+      banner.innerText = 'Choose Your Weapon!'
+    }
   }
-  }
-  }
-
-
-//
-// function resetWeapon() {
-//   for (var i = 0; i < weaponButtons.length; i++) {
-//     if (weaponButtons[i].classList[i] === 'hidden'){
-//       show(weaponButtons[i])
-//     }
-//   }
-// }
+}
