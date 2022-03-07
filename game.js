@@ -5,6 +5,7 @@ class Game {
     this.player1 = player1,
     this.player2 = player2,
     this.gameType = gameType
+    this.weapons = ['rock', 'paper', 'scissors', 'lizard', 'scissors']
     this.winConditions = {
       rock: ['scissors', 'lizard'],
       paper: ['rock', 'alien'],
