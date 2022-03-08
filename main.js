@@ -1,7 +1,7 @@
 var clickToPlayEasy = document.querySelector(".easy");
 var clickToPlayHard = document.querySelector(".hard");
 var clickToPlay = document.querySelectorAll(".difficulty-box");
-var weaponButtons = document.querySelectorAll(".weapon");
+var weaponButtons = document.querySelectorAll(".advanced");
 var classicWeapons = document.querySelectorAll(".classic");
 var rules = document.querySelectorAll(".rules");
 var changeGameBtn = document.querySelector(".change-game");
@@ -14,31 +14,8 @@ var weaponsArray = ["rock", "paper", "scissors", "lizard", "alien"];
 var humanChoice = document.querySelector(".human-choice");
 var computerChoice = document.querySelector(".computer-choice")
 var weaponChoice = document.querySelector(".weapon-choice");
-var randomWeapon = weaponsArray[getRandomIndex(weaponsArray)];
-var emoji = `<img
-  class="classic weapon rock"
-  id="rock"
-  src="./images/happy-rocks.png"
-  alt="emoji alien"
-/>`
 var game;
 
-// gameBox.addEventListener('click', function() {
-//   assignGameMode(event)
-// })
-//
-// function assignGameMode() {
-//   mouseClick = event.target.className
-//   console.log(mouseClick)
-//   // for (var i = 0; i < rules.length; i++) {
-//     if (mouseClick === clickToPlayEasy.className) {
-//     game.gameType = 'classic'
-//     console.log(game.gameType)
-//   } else if (mouseClick === clickToPlayHard.className) {
-//     game.gameType = 'advanced'
-//   }
-//   }
-// }
 window.addEventListener("load", game);
 
 clickToPlayEasy.addEventListener("click", function () {
@@ -69,12 +46,13 @@ changeGameBtn.addEventListener("click", function () {
 
 chooseWeapon.addEventListener("click", function () {
   playerWeaponChoice(event);
-  game.player2.takeTurn();
+  game.gameMode();
+  hide(changeGameBtn)
   game.checkWinner(game.player1.currentWeapon, game.player2.currentWeapon);
   game.displayScore();
   game.compareWeapons()
-  // compareWeapons()
   setTimeout(roundTwo, 3000);
+  show(changeGameBtn)
 });
 
 function playerWeaponChoice(event) {
@@ -99,10 +77,6 @@ function game() {
   game = new Game(newPlayer, computerPlayer);
 }
 
-function getRandomIndex(num) {
-  return Math.floor(Math.random() * num);
-}
-
 function toggle(element) {
   element.classList.toggle("hidden");
 }
@@ -121,29 +95,8 @@ function showWeapons(weapons) {
   }
 }
 
-// function compareWeapons() {
-//   for (var i = 0; i < weaponButtons.length; i++) {
-//     if (
-//       weaponButtons[i].id !== game.player1.currentWeapon &&
-//       weaponButtons[i].id !== game.player2.currentWeapon
-//     ) {
-//       hide(weaponButtons[i]);
-//     }
-//   }
-// }
-
-function compareWeapons() {
-  hide(chooseWeapon);
-  weaponChoice.classList.remove("hidden");
-  humanChoice.innerHTML = emoji;
-  computerChoice.innerHTML = `game.player2.currentWeapon`;
-}
-
 function roundTwo() {
-  // for (var i = 0; i < classicWeapons.length; i++) {
-  //   if (classicWeapons[i].classList.contains("hidden")) {
-  //     show(classicWeapons[i]);
+      hide(weaponChoice)
+      show(chooseWeapon)
       banner.innerText = "Choose Your Weapon!";
     }
-//   }
-// }
