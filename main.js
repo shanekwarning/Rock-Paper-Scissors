@@ -3,7 +3,7 @@ var clickToPlayHard = document.querySelector(".hard");
 var clickToPlay = document.querySelectorAll(".difficulty-box");
 var weaponButtons = document.querySelectorAll(".advanced");
 var classicWeapons = document.querySelectorAll(".classic");
-var rules = document.querySelectorAll(".rules");
+var weapon = document.querySelectorAll(".weapon");
 var changeGameBtn = document.querySelector(".change-game");
 var chooseWeapon = document.querySelector(".weapon-icons");
 var gameBox = document.querySelector(".gamebox");
@@ -58,9 +58,10 @@ chooseWeapon.addEventListener("click", function () {
 function playerWeaponChoice(event) {
   mouseClick = event.target.className;
   selection = event.target.id;
-  for (var i = 0; i < weaponButtons.length; i++) {
-    if (weaponButtons[i].className === event.target.className) {
+  for (var i = 0; i < weapon.length; i++) {
+    if (weapon[i].className === mouseClick) {
       game.player1.currentWeapon = selection;
+      console.log(game.player1.currentWeapon)
     }
   }
 }
