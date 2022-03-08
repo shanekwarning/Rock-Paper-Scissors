@@ -20,10 +20,10 @@ class Game {
                 `<img class="weapon advanced" id="alien" src="./images/flat-alien.png" alt="emoji alien" />`]
   }
   gameMode() {
-    if (this.gameType = 'classic'){
-      this.player2.takeTurn(3)
-    } else if (this.gameType = 'advanced') {
-      this.player2.takeTurn(5)
+    if (this.gameType === 'classic'){
+      return this.player2.takeTurn(3)
+    } else if (this.gameType ==='advanced') {
+      return this.player2.takeTurn(5)
     }
   }
   checkWinner(player, computer) {
@@ -41,12 +41,12 @@ class Game {
   compareWeapons() {
     hide(chooseWeapon);
     weaponChoice.classList.remove("hidden");
-    for (var i = 0; i < 3; i++) {
+    for (var i = 0; i < 5; i++) {
       if (this.player1.currentWeapon === this.weapons[i]) {
         humanChoice.innerHTML = this.images[i];
         // humanChoice.innerText = `You picked ${this.player1.currentWeapon}.`
       }
-    } for (var i = 0; i < 3; i++) {
+    } for (var i = 0; i < 5; i++) {
       if (this.player2.currentWeapon === this.weapons[i]) {
         computerChoice.innerHTML = this.images[i];
         // computerChoice.innerText = `The computer chose ${this.player2.currentWeapon}`
