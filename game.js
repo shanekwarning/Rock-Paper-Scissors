@@ -26,6 +26,7 @@ class Game {
       return this.player2.takeTurn(5)
     }
   }
+
   checkWinner(player, computer) {
       if (player === computer) {
         banner.innerText = 'It\s a tie.'
@@ -38,6 +39,7 @@ class Game {
         banner.innerText = 'Computer Wins.'
       }
   }
+  
   compareWeapons() {
     hide(chooseWeapon);
     weaponChoice.classList.remove("hidden");
