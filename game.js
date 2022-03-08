@@ -15,13 +15,17 @@ class Game {
     }
     this.images = [`<img class="classic weapon rock" id="rock" src="./images/happy-rocks.png" alt="emoji rock"/>`,
                 `<img class="classic weapon paper" id="paper" src="./images/happy-paper.png" alt="emoji paper" />`,
-                `<img class="classic weapon scissors" id="scissors" src="./images/happy-scissors.png" alt="emoji scissors" />`]
+                `<img class="classic weapon scissors" id="scissors" src="./images/happy-scissors.png" alt="emoji scissors" />`,
+                `<img class="weapon advanced" id="lizard" src="./images/flat-lizard.png" alt="emoji lizard" />`,
+                `<img class="weapon advanced" id="alien" src="./images/flat-alien.png" alt="emoji alien" />`]
   }
-  // gameMode() {
-  //   if (this.gameType = 'classic'){
-  //
-  //   } else if (this.gameType = 'advanced')
-  // }
+  gameMode() {
+    if (this.gameType = 'classic'){
+      this.player2.takeTurn(3)
+    } else if (this.gameType = 'advanced') {
+      this.player2.takeTurn(5)
+    }
+  }
   checkWinner(player, computer) {
       if (player === computer) {
         banner.innerText = 'It\s a tie.'
@@ -40,12 +44,12 @@ class Game {
     for (var i = 0; i < 3; i++) {
       if (this.player1.currentWeapon === this.weapons[i]) {
         humanChoice.innerHTML = this.images[i];
-        humanChoice.innerText = `You picked ${this.player1.currentWeapon}.`
+        // humanChoice.innerText = `You picked ${this.player1.currentWeapon}.`
       }
     } for (var i = 0; i < 3; i++) {
       if (this.player2.currentWeapon === this.weapons[i]) {
         computerChoice.innerHTML = this.images[i];
-        computerChoice.innerText = `The computer chose ${this.player2.currentWeapon}`
+        // computerChoice.innerText = `The computer chose ${this.player2.currentWeapon}`
       }
     }
   }
