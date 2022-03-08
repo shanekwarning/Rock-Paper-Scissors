@@ -5,7 +5,7 @@ class Game {
     this.player1 = player1,
     this.player2 = player2,
     this.gameType = gameType
-    this.weapons = ['rock', 'paper', 'scissors', 'lizard', 'scissors']
+    this.weapons = ['rock', 'paper', 'scissors', 'lizard', 'alien']
     this.winConditions = {
       rock: ['scissors', 'lizard'],
       paper: ['rock', 'alien'],
@@ -13,6 +13,9 @@ class Game {
       lizard: ['paper', 'alien'],
       alien: ['scissors', 'rock']
     }
+    this.images = [`<img class="classic weapon rock" id="rock" src="./images/happy-rocks.png" alt="emoji rock"/>`,
+                `<img class="classic weapon paper" id="paper" src="./images/happy-paper.png" alt="emoji paper" />`,
+                `<img class="classic weapon scissors" id="scissors" src="./images/happy-scissors.png" alt="emoji scissors" />`]
   }
   // gameMode() {
   //   if (this.gameType = 'classic'){
@@ -31,6 +34,22 @@ class Game {
         banner.innerText = 'Computer Wins.'
       }
   }
+  compareWeapons() {
+    hide(chooseWeapon);
+    weaponChoice.classList.remove("hidden");
+    for (var i = 0; i < 3; i++) {
+      if (this.player1.currentWeapon === this.weapons[i]) {
+        humanChoice.innerHTML = this.images[i];
+        humanChoice.innerText = `You picked ${this.player1.currentWeapon}.`
+      }
+    } for (var i = 0; i < 3; i++) {
+      if (this.player2.currentWeapon === this.weapons[i]) {
+        computerChoice.innerHTML = this.images[i];
+        computerChoice.innerText = `The computer chose ${this.player2.currentWeapon}`
+      }
+    }
+  }
+
   displayScore() {
     if (banner.innerText === 'Computer Wins.') {
       computerScore.innerText = `Win\s ${this.player2.wins}`
