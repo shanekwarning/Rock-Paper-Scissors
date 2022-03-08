@@ -1,6 +1,4 @@
 body {
-  /* display: flex;
-  justify-content: space-between; */
   margin: 0;
 }
 
@@ -12,8 +10,6 @@ main {
 
 .gamebox {
   background-color: slateBlue;
-  border-color: purple;
-  border-style: solid;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -22,9 +18,6 @@ main {
 }
 
 header {
-  border: 4px;
-  border-color: orange;
-  border-style: solid;
   padding: 0px;
   background-color: slateBlue;
   display: flex;
@@ -41,12 +34,12 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-content: center;
+  align-items: center;
   background: darkred;
   border-radius: 20px;
   border-radius: 20px;
-  width: 15%;
-  height: 20%;
+  width: 25%;
+  height: 25%;
 }
 .hard {
   margin: 10%;
@@ -67,32 +60,29 @@ h1 {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  border-color: pink;
-  border-style: solid;
 }
 
 .weapon {
-  height: 40px;
-  width: 40px;
+  height: 80px;
+  width: 80px;
 }
 
 .weapon-choice {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
   height: 500px;
   width: 500px;
-  border: solid;
-  border-color: red;
 }
 
 .human-side {
   width: 15%;
   background-color: green;
-  /* height: 100%; */
 }
 
 .computer-side {
   width: 15%;
   background-color: green;
-  /* height: 100%; */
 }
 
 .icon {
