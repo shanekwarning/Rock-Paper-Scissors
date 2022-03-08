@@ -44,12 +44,10 @@ class Game {
     for (var i = 0; i < 5; i++) {
       if (this.player1.currentWeapon === this.weapons[i]) {
         humanChoice.innerHTML = this.images[i];
-        // humanChoice.innerText = `You picked ${this.player1.currentWeapon}.`
       }
     } for (var i = 0; i < 5; i++) {
       if (this.player2.currentWeapon === this.weapons[i]) {
         computerChoice.innerHTML = this.images[i];
-        // computerChoice.innerText = `The computer chose ${this.player2.currentWeapon}`
       }
     }
   }
