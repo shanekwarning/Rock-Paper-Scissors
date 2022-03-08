@@ -6,7 +6,7 @@ class Player {
   }
   takeTurn(num) {
       var randomIndex = Math.floor(Math.random() * num);
-     var randomWeapon = weaponsArray[randomIndex]
+     var randomWeapon = game.weapons[randomIndex]
     return this.currentWeapon = randomWeapon
   }
 }
