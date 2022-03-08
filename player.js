@@ -5,7 +5,7 @@ class Player {
     this.wins = 0
   }
   takeTurn(weapon) {
-    randomWeapon = weaponsArray[getRandomIndex(weaponsArray)]
+    randomWeapon = weaponsArray[getRandomIndex(5)]
     return this.currentWeapon = weapon || randomWeapon
   }
 }
