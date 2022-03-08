@@ -10,7 +10,6 @@ var gameBox = document.querySelector(".gamebox");
 var banner = document.querySelector("h2");
 var playerScore = document.querySelector(".player-score");
 var computerScore = document.querySelector(".computer-score");
-var weaponsArray = ["rock", "paper", "scissors", "lizard", "alien"];
 var humanChoice = document.querySelector(".human-choice");
 var computerChoice = document.querySelector(".computer-choice")
 var weaponChoice = document.querySelector(".weapon-choice");
@@ -33,10 +32,13 @@ clickToPlayHard.addEventListener("click", function () {
   toggle(clickToPlayHard);
   toggle(chooseWeapon);
   show(changeGameBtn)
-});
+})
 
+chooseWeapon.addEventListener("click", playGame)
 
-chooseWeapon.addEventListener("click", function () {
+changeGameBtn.addEventListener("click", operateChangeBtn)
+
+function playGame() {
   playerWeaponChoice(event);
   game.gameMode();
   hide(changeGameBtn)
@@ -45,18 +47,7 @@ chooseWeapon.addEventListener("click", function () {
   game.compareWeapons()
   setTimeout(roundTwo, 3000);
   setTimeout(displayChangeBtn, 3000)
-
-});
-
-changeGameBtn.addEventListener("click", function () {
-  toggle(chooseWeapon);
-  toggle(clickToPlayEasy);
-  toggle(clickToPlayHard);
-  hide(changeGameBtn)
-  if (game.gameType === 'advanced') {
-    showWeapons(weaponButtons);
-  }
-});
+}
 
 function playerWeaponChoice(event) {
   mouseClick = event.target.className;
@@ -68,10 +59,21 @@ function playerWeaponChoice(event) {
     }
   }
 }
+
 function classic() {
   for (var i = 0; i < clickToPlay.length; i++) {
     toggle(clickToPlay[i]);
     toggle(weaponButtons[i]);
+  }
+}
+
+function operateChangeBtn() {
+  toggle(chooseWeapon);
+  toggle(clickToPlayEasy);
+  toggle(clickToPlayHard);
+  hide(changeGameBtn)
+  if (game.gameType === 'advanced') {
+    showWeapons(weaponButtons);
   }
 }
 
