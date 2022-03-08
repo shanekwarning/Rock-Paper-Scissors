@@ -34,14 +34,9 @@ clickToPlayHard.addEventListener("click", function () {
 });
 
 changeGameBtn.addEventListener("click", function () {
-  // for (var i = 0; i < weaponButtons.length; i++) {
-  //   hide(weaponButtons[i]);
-
     toggle(chooseWeapon);
-    // toggle()
     toggle(clickToPlayEasy);
     toggle(clickToPlayHard);
-  // }
 });
 
 chooseWeapon.addEventListener("click", function () {
