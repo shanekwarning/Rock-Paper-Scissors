@@ -12,9 +12,15 @@ var playerScore = document.querySelector(".player-score");
 var computerScore = document.querySelector(".computer-score");
 var weaponsArray = ["rock", "paper", "scissors", "lizard", "alien"];
 var humanChoice = document.querySelector(".human-choice");
+var computerChoice = document.querySelector(".computer-choice")
 var weaponChoice = document.querySelector(".weapon-choice");
 var randomWeapon = weaponsArray[getRandomIndex(weaponsArray)];
-
+var emoji = `<img
+  class="classic weapon rock"
+  id="rock"
+  src="./images/happy-rocks.png"
+  alt="emoji alien"
+/>`
 var game;
 
 // gameBox.addEventListener('click', function() {
@@ -37,26 +43,28 @@ window.addEventListener("load", game);
 
 clickToPlayEasy.addEventListener("click", function () {
   game.gameType = "classic";
-  // showWeapons(classicWeapons)
-  toggle(clickToPlay[0]);
-  toggle(clickToPlay[1]);
+  toggle(clickToPlayEasy);
+  toggle(clickToPlayHard);
   toggle(chooseWeapon);
 });
 
 clickToPlayHard.addEventListener("click", function () {
   game.gameType = "advanced";
   showWeapons(weaponButtons);
-  toggle(clickToPlay[0]);
-  toggle(clickToPlay[1]);
+  toggle(clickToPlayEasy);
+  toggle(clickToPlayHard);
   toggle(chooseWeapon);
 });
 
 changeGameBtn.addEventListener("click", function () {
-  for (var i = 0; i < weaponButtons.length; i++) {
-    hide(weaponButtons[i]);
+  // for (var i = 0; i < weaponButtons.length; i++) {
+  //   hide(weaponButtons[i]);
+
     toggle(chooseWeapon);
-    show(clickToPlay[i]);
-  }
+    // toggle()
+    toggle(clickToPlayEasy);
+    toggle(clickToPlayHard);
+  // }
 });
 
 chooseWeapon.addEventListener("click", function () {
@@ -64,6 +72,7 @@ chooseWeapon.addEventListener("click", function () {
   game.player2.takeTurn();
   game.checkWinner(game.player1.currentWeapon, game.player2.currentWeapon);
   game.displayScore();
+  game.compareWeapons()
   // compareWeapons()
   setTimeout(roundTwo, 3000);
 });
@@ -126,15 +135,15 @@ function showWeapons(weapons) {
 function compareWeapons() {
   hide(chooseWeapon);
   weaponChoice.classList.remove("hidden");
-  humanChoice.innerText = `game.player1.currentWeapon`;
-  computerChoice.innerText = `game.player2.currentWeapon`;
+  humanChoice.innerHTML = emoji;
+  computerChoice.innerHTML = `game.player2.currentWeapon`;
 }
 
 function roundTwo() {
-  for (var i = 0; i < classicWeapons.length; i++) {
-    if (classicWeapons[i].classList.contains("hidden")) {
-      show(classicWeapons[i]);
+  // for (var i = 0; i < classicWeapons.length; i++) {
+  //   if (classicWeapons[i].classList.contains("hidden")) {
+  //     show(classicWeapons[i]);
       banner.innerText = "Choose Your Weapon!";
     }
-  }
-}
+//   }
+// }
