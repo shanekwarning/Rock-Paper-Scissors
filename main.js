@@ -23,6 +23,7 @@ clickToPlayEasy.addEventListener("click", function () {
   toggle(clickToPlayEasy);
   toggle(clickToPlayHard);
   toggle(chooseWeapon);
+  show(changeGameBtn)
 });
 
 clickToPlayHard.addEventListener("click", function () {
@@ -31,13 +32,9 @@ clickToPlayHard.addEventListener("click", function () {
   toggle(clickToPlayEasy);
   toggle(clickToPlayHard);
   toggle(chooseWeapon);
+  show(changeGameBtn)
 });
 
-changeGameBtn.addEventListener("click", function () {
-    toggle(chooseWeapon);
-    toggle(clickToPlayEasy);
-    toggle(clickToPlayHard);
-});
 
 chooseWeapon.addEventListener("click", function () {
   playerWeaponChoice(event);
@@ -47,7 +44,18 @@ chooseWeapon.addEventListener("click", function () {
   game.displayScore();
   game.compareWeapons()
   setTimeout(roundTwo, 3000);
-  show(changeGameBtn)
+  setTimeout(displayChangeBtn, 3000)
+
+});
+
+changeGameBtn.addEventListener("click", function () {
+  toggle(chooseWeapon);
+  toggle(clickToPlayEasy);
+  toggle(clickToPlayHard);
+  hide(changeGameBtn)
+  if (game.gameType === 'advanced') {
+    showWeapons(weaponButtons);
+  }
 });
 
 function playerWeaponChoice(event) {
@@ -92,7 +100,11 @@ function showWeapons(weapons) {
 }
 
 function roundTwo() {
-      hide(weaponChoice)
-      show(chooseWeapon)
-      banner.innerText = "Choose Your Weapon!";
-    }
+  hide(weaponChoice)
+  show(chooseWeapon)
+  banner.innerText = "Choose Your Weapon!";
+}
+
+function displayChangeBtn() {
+  show(changeGameBtn)
+}
