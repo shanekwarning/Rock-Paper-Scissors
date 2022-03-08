@@ -1,13 +1,13 @@
 body {
-  display: flex;
-  justify-content: space-between;
-  margin: 0
+  /* display: flex;
+  justify-content: space-between; */
+  margin: 0;
 }
 
 main {
-  width: 70%;
-  height: 100%
-
+  display: flex;
+  flex-direction: row;
+  height: 100%;
 }
 
 .gamebox {
@@ -16,9 +16,9 @@ main {
   border-style: solid;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  height: 100%
+  width: 70%;
 }
 
 header {
@@ -29,11 +29,12 @@ header {
   background-color: slateBlue;
   display: flex;
   flex-direction: column;
-  align-items: center
+  align-items: center;
+  width: 100%;
 }
 
 h1 {
-color: #ccff15
+  color: #ccff15;
 }
 
 .difficulty-box {
@@ -48,12 +49,12 @@ color: #ccff15
   height: 20%;
 }
 .hard {
-  margin: 10%
+  margin: 10%;
 }
 .rules {
   margin: 3;
   color: lightgreen;
-  font-size: 1vw, 1vh
+  font-size: 1vw, 1vh;
 }
 
 .title {
@@ -72,31 +73,38 @@ color: #ccff15
 
 .weapon {
   height: 40px;
-  width: 40px
+  width: 40px;
+}
+
+.weapon-choice {
+  height: 500px;
+  width: 500px;
+  border: solid;
+  border-color: red;
 }
 
 .human-side {
   width: 15%;
-  background-color:green;
-  height: 100%
+  background-color: green;
+  /* height: 100%; */
 }
 
 .computer-side {
   width: 15%;
-  background-color:green;
-  height: 100%
+  background-color: green;
+  /* height: 100%; */
 }
 
 .icon {
   height: 50px;
-  width: 50px
+  width: 50px;
 }
 .player {
   display: flex;
   flex-direction: column;
-  align-items: center
+  align-items: center;
 }
 
 .hidden {
-  display: none
+  display: none;
 }
