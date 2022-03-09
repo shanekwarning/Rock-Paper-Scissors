@@ -25,6 +25,8 @@ To get started, users can click [here](https://shanekwarning.github.io/Rock-Pape
 
 - After selecting one of the 'Click Here to Play' boxes users will be presented with images of the weapon choices. Users can click an image to select that as their weapon. Clicking a weapn image will run the game. It will show the players weapon on the left and the computers weapon on the right. The text above will change to show who the winner is, and the 'Wins' score area will update. The player's game side can be found on the left and the computer's can be found on the right.
 
+![Screen Shot 2022-03-09 at 2 51 20 PM](https://user-images.githubusercontent.com/97068979/157533825-292f151e-7fc1-4a75-8a41-79c3213f7729.png)
+
 #### Change Game
 
 - The 'Change Game' button will not be visible on the initial load of the page. The 'Change Game' button will become visiable on the player's side after users click 'Click Here to Play'. At this point users can click the button to have the 'Click Here to Play' options redisplayed. Users scores will not be reset when selecting a new game type.
