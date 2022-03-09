@@ -19,6 +19,8 @@ To get started, users can click [here](https://shanekwarning.github.io/Rock-Pape
 
 - Upon opening and running the application users will see two options to 'Click Here to Play'. Each of these will have the corresponding rules inside the box that allows users to choose which version of the game to play. Clicking either of the options will start the initial phase of the game.
 
+<img width="1427" alt="Screen Shot 2022-03-08 at 6 42 13 PM" src="https://user-images.githubusercontent.com/97068979/157533295-597bc915-b803-48e8-ad0b-ee9aebbe380c.png">
+
 #### Choosing Weapon
 
 - After selecting one of the 'Click Here to Play' boxes users will be presented with images of the weapon choices. Users can click an image to select that as their weapon. Clicking a weapn image will run the game. It will show the players weapon on the left and the computers weapon on the right. The text above will change to show who the winner is, and the 'Wins' score area will update. The player's game side can be found on the left and the computer's can be found on the right.
